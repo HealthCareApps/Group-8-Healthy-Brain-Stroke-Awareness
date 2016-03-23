@@ -20,7 +20,6 @@ public class MainActivity extends FragmentActivity implements HeadlinesFragment.
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.news_articles);
-
         // Check whether the activity is using the layout version with
         // the fragment_container FrameLayout. If so, we must add the first fragment
         if (findViewById(R.id.fragment_container) != null) {
@@ -36,7 +35,7 @@ public class MainActivity extends FragmentActivity implements HeadlinesFragment.
             HeadlinesFragment firstFragment = new HeadlinesFragment();
 
             // In case this activity was started with special instructions from an Intent,
-            // pass the Intent's extras to the fragment as arguments
+            // pass the Intent's extras to the fragment as argument
             firstFragment.setArguments(getIntent().getExtras());
 
             // Add the fragment to the 'fragment_container' FrameLayout

@@ -18,7 +18,8 @@ limitations under the License.
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary">
 
     <fragment android:name="com.example.strokeapp2.ArticleFragment"
         android:id="@+id/article_fragment"
