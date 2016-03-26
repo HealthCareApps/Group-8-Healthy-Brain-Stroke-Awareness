@@ -4,8 +4,8 @@ package com.example.strokeapp2;
 public class Ipsum {
 
     static String[] Headlines = {
-            "Article One",
-            "Article Two"
+            "HELP",
+            "PREVENTATIVE INFORMATION"
     };
 
     static String[] Articles = {

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -53,8 +54,21 @@ public class ArticleFragment extends Fragment {
 
     public void updateArticleView(int position) {
         //Log.i("xx", " " + position + " ");
-        TextView article = (TextView) getActivity().findViewById(R.id.article);
-        article.setText(Ipsum.Articles[position]);
+        FrameLayout article = (FrameLayout) getActivity().findViewById(R.id.article);
+        //article.setText(Ipsum.Articles[position]);
+        if(position == 0) {
+            article.setBackgroundColor(0XBEFF0000);
+            TextView article_text = new TextView(article.getContext());
+            article.addView(article_text);
+            article_text.setTextSize(40);
+            article_text.setText("Stroke Symptom 1\n\nStroke Symptom 2\n\nStroke Symptom 3\n\nStroke Symptom 4\n\nStroke Symptom 5\n\nStroke Symptom 6");
+        }else{
+            if(position == 1){
+                article.setBackgroundColor(0X9000FF00);
+            }else{
+                    article.setBackgroundColor(0xFF000000);
+                }
+            }
         mCurrentPosition = position;
     }
 
