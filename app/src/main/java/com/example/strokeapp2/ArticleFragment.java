@@ -3,11 +3,13 @@ package com.example.strokeapp2;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
+import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -54,15 +56,34 @@ public class ArticleFragment extends Fragment {
 
     public void updateArticleView(int position) {
         //Log.i("xx", " " + position + " ");
-        FrameLayout article = (FrameLayout) getActivity().findViewById(R.id.article);
+        GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
+        //GridView article = new GridView(frame.getContext());
+        //article.setLayoutParams(getActivity().findViewById(R.id.grid).getLayoutParams());
         //article.setText(Ipsum.Articles[position]);
         if(position == 0) {
             article.setBackgroundColor(0XBEFF0000);
-            TextView article_text = new TextView(article.getContext());
-            article.addView(article_text);
-            article_text.setTextSize(40);
-            article_text.setText("Stroke Symptom 1\n\nStroke Symptom 2\n\nStroke Symptom 3\n\nStroke Symptom 4\n\nStroke Symptom 5\n\nStroke Symptom 6");
-        }else{
+            //frame.addView(article);
+            TextView article_text1 = new TextView(article.getContext());
+            article_text1.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            article.addView(article_text1);
+            article_text1.setTextSize(26);
+            article_text1.setText("Stroke Symptom 1\n\n");
+            TextView article_text2 = new TextView(article.getContext());
+            article_text2.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            article.addView(article_text2);
+            article_text2.setTextSize(26);
+            article_text2.setText("Stroke Symptom 2\n\n");
+            TextView article_text3 = new TextView(article.getContext());
+            article_text3.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            article.addView(article_text3);
+            article_text3.setTextSize(26);
+            article_text3.setText("Stroke Symptom 3\n\n");
+            TextView article_text4 = new TextView(article.getContext());
+            article_text4.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            article.addView(article_text4);
+            article_text4.setTextSize(26);
+            article_text4.setText("Stroke Symptom 4\n\n");
+            }else{
             if(position == 1){
                 article.setBackgroundColor(0X9000FF00);
             }else{
