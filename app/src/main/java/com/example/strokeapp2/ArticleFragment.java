@@ -21,7 +21,6 @@ import android.widget.Toast;
 public class ArticleFragment extends Fragment {
     View.OnClickListener a = new  View.OnClickListener(){
         public void onClick(View v){
-            v.refreshDrawableState();
             updateArticleView(2);
         }
     };
@@ -43,6 +42,43 @@ public class ArticleFragment extends Fragment {
             updateArticleView(5);
         }
     };
+
+    View.OnClickListener e = new  View.OnClickListener(){
+        public void onClick(View v){
+            updateArticleView(6);
+        }
+    };
+
+    View.OnClickListener f = new  View.OnClickListener(){
+        public void onClick(View v){
+            updateArticleView(7);
+        }
+    };
+
+    View.OnClickListener g = new  View.OnClickListener(){
+        public void onClick(View v){
+            updateArticleView(8);
+        }
+    };
+
+    View.OnClickListener h = new  View.OnClickListener(){
+        public void onClick(View v){
+            updateArticleView(9);
+        }
+    };
+
+    View.OnClickListener i = new  View.OnClickListener(){
+        public void onClick(View v){
+            updateArticleView(10);
+        }
+    };
+
+    View.OnClickListener j = new  View.OnClickListener(){
+        public void onClick(View v){
+            updateArticleView(11);
+        }
+    };
+
     final static String ARG_POSITION = "position";
     int mCurrentPosition = -1;
 
@@ -121,6 +157,26 @@ public class ArticleFragment extends Fragment {
             if (position == 1) {
                 //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
                 article.setBackgroundColor(0X9000FF00);
+
+                TextView article_text5 = new TextView(article.getContext());
+                article_text5.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                article.addView(article_text5);
+                article_text5.setOnClickListener(e);
+                article_text5.setTextSize(26);
+                article_text5.setText("PREVENTION\n\n");
+                TextView article_text6 = new TextView(article.getContext());
+                article_text6.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                article.addView(article_text6);
+                article_text6.setOnClickListener(f);
+                article_text6.setTextSize(26);
+                article_text6.setText("MODIFIED RISK FACTORS\n\n");
+                TextView article_text7 = new TextView(article.getContext());
+                article_text7.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                article.addView(article_text7);
+                article_text7.setOnClickListener(g);
+                article_text7.setTextSize(26);
+                article_text7.setText("NON MODIFIED RISK FACTORS\n\n");
+
             } else {
                 if (position == 2) {
                     //FrameLayout frame = (FrameLayout) getActivity().findViewById(R.id.frame);
@@ -130,7 +186,7 @@ public class ArticleFragment extends Fragment {
                     ImageView image1 = new ImageView(article.getContext());
                     article.addView(image1);
                     image1.setImageResource(R.drawable.sample_1);
-                }else{
+                } else {
                     if (position == 3) {
                         //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
                         article.removeAllViewsInLayout();
@@ -138,7 +194,7 @@ public class ArticleFragment extends Fragment {
                         ImageView image2 = new ImageView(article.getContext());
                         article.addView(image2);
                         image2.setImageResource(R.drawable.sample_2);
-                    }else{
+                    } else {
                         if (position == 4) {
                             //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
                             article.removeAllViewsInLayout();
@@ -146,7 +202,7 @@ public class ArticleFragment extends Fragment {
                             ImageView image3 = new ImageView(article.getContext());
                             article.addView(image3);
                             image3.setImageResource(R.drawable.sample_3);
-                        }else{
+                        } else {
                             if (position == 5) {
                                 //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
                                 article.removeAllViewsInLayout();
@@ -155,8 +211,75 @@ public class ArticleFragment extends Fragment {
                                 article.addView(image4);
                                 image4.setImageResource(R.drawable.sample_4);
                             } else {
-                                //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
-                                article.setBackgroundColor(0xFF000000);
+                                if (position == 6) {
+                                    article.removeAllViewsInLayout();
+                                    article.setBackgroundColor(0X9000FF00);
+                                    TextView prevention = new TextView(article.getContext());
+                                    article.addView(prevention);
+                                    prevention.setTextSize(26);
+                                    prevention.setText("stroke prevention information stroke prevention information stroke prevention information stroke prevention information" +
+                                            "stroke prevention information stroke prevention information stroke prevention information stroke prevention information");
+                                } else {
+                                    if (position == 7) {
+                                        article.removeAllViewsInLayout();
+                                        article.setBackgroundColor(0X9000FF00);
+                                        TextView mrf1 = new TextView(article.getContext());
+                                        mrf1.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                                        article.addView(mrf1);
+                                        mrf1.setOnClickListener(h);
+                                        mrf1.setTextSize(26);
+                                        mrf1.setText("MODIFIED RISK FACTOR 1(CLICK FOR DETAILED INFO)\n\n");
+                                        TextView mrf2 = new TextView(article.getContext());
+                                        mrf2.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                                        article.addView(mrf2);
+                                        mrf2.setOnClickListener(i);
+                                        mrf2.setTextSize(26);
+                                        mrf2.setText("MODIFIED RISK FACTOR 2(CLICK FOR DETAILED INFO)\n\n");
+                                        TextView mrf3 = new TextView(article.getContext());
+                                        mrf3.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                                        article.addView(mrf3);
+                                        mrf3.setOnClickListener(j);
+                                        mrf3.setTextSize(26);
+                                        mrf3.setText("MODIFIED RISK FACTOR 3(CLICK FOR DETAILED INFO)\n\n");
+                                    }else{
+                                        if(position == 8) {
+
+                                        }else{
+                                            if(position == 9){
+                                                article.removeAllViewsInLayout();
+                                                article.setBackgroundColor(0X9000FF00);
+                                                TextView mrf1details = new TextView(article.getContext());
+                                                article.addView(mrf1details);
+                                                mrf1details.setTextSize(26);
+                                                mrf1details.setText("details for modified risk factor 1 details for modified risk factor 1 details for modified risk factor 1 details for modified risk factor 1" +
+                                                        "details for modified risk factor 1 details for modified risk factor 1 details for modified risk factor 1 details for modified risk factor 1");
+                                            }else{
+                                                if(position == 10){
+                                                    article.removeAllViewsInLayout();
+                                                    article.setBackgroundColor(0X9000FF00);
+                                                    TextView mrf2details = new TextView(article.getContext());
+                                                    article.addView(mrf2details);
+                                                    mrf2details.setTextSize(26);
+                                                    mrf2details.setText("details for modified risk factor 2 details for modified risk factor 2 details for modified risk factor 2 details for modified risk factor 2" +
+                                                            "details for modified risk factor 2 details for modified risk factor 2 details for modified risk factor 2 details for modified risk factor 2");
+                                                }else{
+                                                    if(position == 11){
+                                                        article.removeAllViewsInLayout();
+                                                        article.setBackgroundColor(0X9000FF00);
+                                                        TextView mrf3details = new TextView(article.getContext());
+                                                        article.addView(mrf3details);
+                                                        mrf3details.setTextSize(26);
+                                                        mrf3details.setText("details for modified risk factor 3 details for modified risk factor 3 details for modified risk factor 3 details for modified risk factor 3" +
+                                                                "details for modified risk factor 3 details for modified risk factor 3 details for modified risk factor 3 details for modified risk factor 3");
+                                                    } else {
+                                                        //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
+                                                        article.setBackgroundColor(0xFF000000);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
