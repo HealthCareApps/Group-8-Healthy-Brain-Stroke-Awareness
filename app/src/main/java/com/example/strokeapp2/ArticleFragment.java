@@ -79,6 +79,24 @@ public class ArticleFragment extends Fragment {
         }
     };
 
+    View.OnClickListener k = new  View.OnClickListener(){
+        public void onClick(View v){
+            updateArticleView(12);
+        }
+    };
+
+    View.OnClickListener l = new  View.OnClickListener(){
+        public void onClick(View v){
+            updateArticleView(13);
+        }
+    };
+
+    View.OnClickListener m = new  View.OnClickListener(){
+        public void onClick(View v){
+            updateArticleView(14);
+        }
+    };
+
     final static String ARG_POSITION = "position";
     int mCurrentPosition = -1;
 
@@ -243,7 +261,26 @@ public class ArticleFragment extends Fragment {
                                         mrf3.setText("MODIFIED RISK FACTOR 3(CLICK FOR DETAILED INFO)\n\n");
                                     }else{
                                         if(position == 8) {
-
+                                            article.removeAllViewsInLayout();
+                                            article.setBackgroundColor(0X9000FF00);
+                                            TextView nmrf1 = new TextView(article.getContext());
+                                            nmrf1.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                                            article.addView(nmrf1);
+                                            nmrf1.setOnClickListener(k);
+                                            nmrf1.setTextSize(26);
+                                            nmrf1.setText("NON MODIFIED RISK FACTOR 1(CLICK FOR DETAILED INFO)\n\n");
+                                            TextView nmrf2 = new TextView(article.getContext());
+                                            nmrf2.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                                            article.addView(nmrf2);
+                                            nmrf2.setOnClickListener(l);
+                                            nmrf2.setTextSize(26);
+                                            nmrf2.setText("NON MODIFIED RISK FACTOR 2(CLICK FOR DETAILED INFO)\n\n");
+                                            TextView nmrf3 = new TextView(article.getContext());
+                                            nmrf3.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                                            article.addView(nmrf3);
+                                            nmrf3.setOnClickListener(m);
+                                            nmrf3.setTextSize(26);
+                                            nmrf3.setText("NON MODIFIED RISK FACTOR 3(CLICK FOR DETAILED INFO)\n\n");
                                         }else{
                                             if(position == 9){
                                                 article.removeAllViewsInLayout();
@@ -271,9 +308,42 @@ public class ArticleFragment extends Fragment {
                                                         mrf3details.setTextSize(26);
                                                         mrf3details.setText("details for modified risk factor 3 details for modified risk factor 3 details for modified risk factor 3 details for modified risk factor 3" +
                                                                 "details for modified risk factor 3 details for modified risk factor 3 details for modified risk factor 3 details for modified risk factor 3");
-                                                    } else {
-                                                        //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
-                                                        article.setBackgroundColor(0xFF000000);
+                                                    }else{
+                                                        if(position == 12){
+                                                            article.removeAllViewsInLayout();
+                                                            article.setBackgroundColor(0X9000FF00);
+                                                            TextView nmrf1details = new TextView(article.getContext());
+                                                            article.addView(nmrf1details);
+                                                            nmrf1details.setTextSize(26);
+                                                            nmrf1details.setText("details for non modified risk factor 1 details for non modified risk factor 1 details for non modified risk factor 1 details for non modified risk factor 1" +
+                                                                    "details for non modified risk factor 1 details for non modified risk factor 1 details for non modified risk factor 1 details for non modified risk factor 1" +
+                                                                    "details for non modified risk factor 1 details for non modified risk factor 1");
+                                                        }else{
+                                                            if(position == 13){
+                                                                article.removeAllViewsInLayout();
+                                                                article.setBackgroundColor(0X9000FF00);
+                                                                TextView nmrf2details = new TextView(article.getContext());
+                                                                article.addView(nmrf2details);
+                                                                nmrf2details.setTextSize(26);
+                                                                nmrf2details.setText("details for non modified risk factor 2 details for non modified risk factor 2 details for non modified risk factor 2 details for non modified risk factor 2" +
+                                                                        "details for non modified risk factor 2 details for non modified risk factor 2 details for non modified risk factor 2 details for non modified risk factor 2" +
+                                                                        "details for non modified risk factor 2 details for non modified risk factor 2");
+                                                            }else{
+                                                                if(position == 14){
+                                                                    article.removeAllViewsInLayout();
+                                                                    article.setBackgroundColor(0X9000FF00);
+                                                                    TextView nmrf3details = new TextView(article.getContext());
+                                                                    article.addView(nmrf3details);
+                                                                    nmrf3details.setTextSize(26);
+                                                                    nmrf3details.setText("details for non modified risk factor 3 details for non modified risk factor 3 details for non modified risk factor 3 details for non modified risk factor 3" +
+                                                                            "details for non modified risk factor 3 details for non modified risk factor 3 details for non modified risk factor 3 details for non modified risk factor 3" +
+                                                                            "details for non modified risk factor 3 details for non modified risk factor 3");
+                                                                } else {
+                                                                    //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
+                                                                    article.setBackgroundColor(0xFF000000);
+                                                                }
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }
