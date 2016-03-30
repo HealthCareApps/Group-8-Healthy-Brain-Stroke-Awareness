@@ -137,6 +137,11 @@ public class ArticleFragment extends Fragment {
         }
     }
 
+
+    //This is essentially where everything happens**************************
+    //*********************************************
+    //*********************************************
+
     public void updateArticleView(int position) {
         //Log.i("xx", " " + position + " ");
         //GridView article = new GridView(frame.getContext());
@@ -144,6 +149,7 @@ public class ArticleFragment extends Fragment {
         //article.setText(Ipsum.Articles[position]);
         GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
         if(position == 0) {
+            article.removeAllViewsInLayout();
             //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
             article.setBackgroundColor(0XBEFF0000);
             //frame.addView(article);
@@ -152,27 +158,28 @@ public class ArticleFragment extends Fragment {
             article.addView(article_text1);
             article_text1.setOnClickListener(a);
             article_text1.setTextSize(26);
-            article_text1.setText("Stroke Symptom 1(click for animation)\n\n");
+            article_text1.setText("Facial Drooping(click for Details)\n\n");
             TextView article_text2 = new TextView(article.getContext());
             article_text2.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             article.addView(article_text2);
             article_text2.setOnClickListener(b);
             article_text2.setTextSize(26);
-            article_text2.setText("Stroke Symptom 2(click for animation)\n\n");
+            article_text2.setText("Confusion(click for Details)\n\n");
             TextView article_text3 = new TextView(article.getContext());
             article_text3.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             article.addView(article_text3);
             article_text3.setOnClickListener(c);
             article_text3.setTextSize(26);
-            article_text3.setText("Stroke Symptom 3(click for animation)\n\n");
+            article_text3.setText("Severe Headache(click for Details)\n\n");
             TextView article_text4 = new TextView(article.getContext());
             article_text4.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             article.addView(article_text4);
             article_text4.setOnClickListener(d);
             article_text4.setTextSize(26);
-            article_text4.setText("Stroke Symptom 4(click for animation)\n\n");
+            article_text4.setText("Arm Weakness(click for Details)\n\n");
             }else {
             if (position == 1) {
+                article.removeAllViewsInLayout();
                 //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
                 article.setBackgroundColor(0X9000FF00);
 
@@ -202,32 +209,57 @@ public class ArticleFragment extends Fragment {
                     article.removeAllViewsInLayout();
                     article.setBackgroundColor(0xBEFF0000);
                     ImageView image1 = new ImageView(article.getContext());
+                    image1.setLayoutParams(new GridView.LayoutParams(540,720));
                     article.addView(image1);
-                    image1.setImageResource(R.drawable.sample_1);
+                    image1.setImageResource(R.drawable.facial_drooping);
+                    TextView facial_drooping = new TextView(article.getContext());
+                    facial_drooping.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                    article.addView(facial_drooping);
+                    facial_drooping.setTextSize(26);
+                    facial_drooping.setText("detailed description of symptom detailed description of symptom detailed description of symptom detailed description of symptom" +
+                            "detailed description of symptom detailed description of symptom detailed description of symptom detailed description of symptom");
                 } else {
                     if (position == 3) {
                         //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
                         article.removeAllViewsInLayout();
                         article.setBackgroundColor(0xBEFF0000);
                         ImageView image2 = new ImageView(article.getContext());
+                        image2.setLayoutParams(new GridView.LayoutParams(540,720));
                         article.addView(image2);
-                        image2.setImageResource(R.drawable.sample_2);
+                        image2.setImageResource(R.drawable.confusion);
+                        TextView confusion = new TextView(article.getContext());
+                        article.addView(confusion);
+                        confusion.setTextSize(26);
+                        confusion.setText("detailed description of symptom detailed description of symptom detailed description of symptom detailed description of symptom" +
+                                "detailed description of symptom detailed description of symptom detailed description of symptom detailed description of symptom");
                     } else {
                         if (position == 4) {
                             //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
                             article.removeAllViewsInLayout();
                             article.setBackgroundColor(0xBEFF0000);
                             ImageView image3 = new ImageView(article.getContext());
+                            image3.setLayoutParams(new GridView.LayoutParams(540,720));
                             article.addView(image3);
-                            image3.setImageResource(R.drawable.sample_3);
+                            image3.setImageResource(R.drawable.severe_headache);
+                            TextView severe_headache = new TextView(article.getContext());
+                            article.addView(severe_headache);
+                            severe_headache.setTextSize(26);
+                            severe_headache.setText("detailed description of symptom detailed description of symptom detailed description of symptom detailed description of symptom " +
+                                    "detailed description of symptom detailed description of symptom detailed description of symptom detailed description of symptom");
                         } else {
                             if (position == 5) {
                                 //GridLayout article = (GridLayout) getActivity().findViewById(R.id.article);
                                 article.removeAllViewsInLayout();
                                 article.setBackgroundColor(0xBEFF0000);
                                 ImageView image4 = new ImageView(article.getContext());
+                                image4.setLayoutParams(new GridView.LayoutParams(540,720));
                                 article.addView(image4);
-                                image4.setImageResource(R.drawable.sample_4);
+                                image4.setImageResource(R.drawable.arm_weakness);
+                                TextView arm_weakness = new TextView(article.getContext());
+                                article.addView(arm_weakness);
+                                arm_weakness.setTextSize(26);
+                                arm_weakness.setText("detailed description of symptom detailed description of symptom detailed description of symptom detailed description of symptom" +
+                                        "detailed description of symptom detailed description of symptom detailed description of symptom detailed description of symptom");
                             } else {
                                 if (position == 6) {
                                     article.removeAllViewsInLayout();
